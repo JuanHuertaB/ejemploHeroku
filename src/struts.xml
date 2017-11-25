@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="registrar" class="pe.com.fueradelgarage.actions.UserAction">
+            <result name="success">listusers.jsp</result>
+        </action>
+        <action name="edit" class="pe.com.fueradelgarage.actions.UserAction" method="edit">
+            <result name="success">edituser.jsp</result>
+        </action>
+        <action name="updateUser" class="pe.com.fueradelgarage.actions.UserAction" method="update">
+            <result name="success">listusers.jsp</result>
+        </action>
+        <action name="delete" class="pe.com.fueradelgarage.actions.UserAction" method="eliminar">
+            <result name="success">listusers.jsp</result>
+        </action>
+
+        <!--ACTION EVENT-->
+        <action name="registrarEvent" class="pe.com.fueradelgarage.actions.EventAction">
+            <result name="success">listevents.jsp</result>
+        </action>
+        <action name="send" class="pe.com.fueradelgarage.actions.UserAction" method="edit">
+            <result name="success">event.jsp</result>
+        </action>
+        <action name="editEvent" class="pe.com.fueradelgarage.actions.EventAction" method="edit">
+            <result name="success">editevent.jsp</result>
+        </action>
+        <action name="updateEvent" class="pe.com.fueradelgarage.actions.EventAction" method="update">
+            <result name="success">listevents.jsp</result>
+        </action>
+        <action name="deleteEvent" class="pe.com.fueradelgarage.actions.EventAction" method="eliminar">
+            <result name="success">listevents.jsp</result>
+        </action>
+    </package>
+</struts>
